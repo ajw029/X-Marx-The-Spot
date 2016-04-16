@@ -93,7 +93,7 @@ nav button {
 	z-index: 9999;
 }
 
-#settings-icon:hover {
+.cog:hover {
    -webkit-animation: rotateFabButton .200s ease-in-out forwards;
    -moz-animation:    rotateFabButton .200s ease-in-out forwards;
    -o-animation:      rotateFabButton .200s ease-in-out forwards;
@@ -277,6 +277,13 @@ nav h1 {
 .folder button img {
 	height: 80%;
 	vertical-align: middle;
+}
+
+.folder button img:hover {
+	-webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    animation: scale(1.15);
 }
 
 .folder button.folderToggle img  {
