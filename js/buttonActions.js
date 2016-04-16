@@ -56,22 +56,45 @@ function sort(e) {
 }
 
 function toggleFolder(e) {
+  console.log(e)
   if ($(e).hasClass('closedFolder')) {
-    $(e.parentNode.parentNode).find('.folderContent').removeClass('hide');
     $(e).removeClass('closedFolder').addClass('openFolder');
     $(e).find('img').addClass('openFolderAnim').removeClass('removeFolderAnim');
-    expandFolder($(e.parentNode.parentNode));
+    expandFolder($(e.parentNode));
   }
   // If folder is open
   else {
     $(e).addClass('closedFolder').removeClass('openFolder');
     $(e.parentNode.parentNode).find('.folderContent').addClass('hide');
     $(e).find('img').removeClass('openFolderAnim').addClass('removeFolderAnim');
+    removeFromRight($(e.parentNode));
   }
 }
 
 function expandFolder(e) {
-    var growDiv = e.find('.folderContent');
+  var folderId = e.context.id;
+  $('.folderContent').each(function(){
+    if (this.id != folderId ) {
+      $(this).addClass('hide')
+    }
+  });
+
+  console.log(folderId)
+  $('.right-container').find('.'+folderId).removeClass("hide");
+  console.log('hi')
+  $('.slide-container').find('.folderToggle').each(function() {
+    var id = $(this).context.parentNode.id
+    if (id != folderId) {
+      $(this).addClass('closedFolder').removeClass('openFolder');
+      $(this).find('img').removeClass('openFolderAnim'); 
+    }
+  });
+    /*var growDiv = e.find('.folder');
+    var thisFolder=growDiv[0].id;
+    var thisMarks=$(e.context.parentNode.parentNode.parentNode).find(thisFolder);
+   
+    thisMarks.removeClass("hide");
+
     if (growDiv.height()) {
       var maxHeight = growDiv.height();
       growDiv.css('height', 0);
@@ -79,6 +102,23 @@ function expandFolder(e) {
             height: maxHeight +'px'
         }, 200);
     }
+     */
+}
+
+function removeFromRight(e) {
+  var folderId = e.context.id;
+
+    $('.right-container').find('.'+folderId).addClass("hide");
+  /*
+     var growDiv = e.find('.folder');
+    var thisFolder=growDiv.context.id;
+     var thisMarks=$("rightContainer").find("."+thisFolder);
+    thisMarks.addClass("hide");
+
+    var rightContainer=$(".folderContent-right")[0];
+    rightContainer.innerHTML=""
+  */
+
 }
 
 function expandFabOverlay() {

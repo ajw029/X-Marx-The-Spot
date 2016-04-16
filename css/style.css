@@ -224,6 +224,27 @@ nav h1 {
 .bookmark:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+
+/* Add style for containers*/
+.container{
+	height: :100%;
+	width:100%;
+}
+.right-container{
+	display: inline;
+	float:left;
+ 	width: 45%;
+	margin-top: 48px;
+}
+
+.slide-container {
+	display: inline;
+	float:left;
+ 	width: 40%;
+	margin-top: 48px;
+	margin-left:20px;
+}
+
 .folderContainer {
 	margin: 0 auto;
 	margin-bottom: 16px !important;
@@ -571,6 +592,19 @@ form {
 	margin: 0 auto;
   margin-bottom:16px;
 }
+
+.settinggroup {
+	width: 300px;
+	position:relative;
+	margin: 0 auto;
+  margin-bottom:16px;
+	border-bottom: 1px solid grey;
+}
+.settinggroup button{
+	width: 200px;
+  position:relative;
+	margin: 0 auto;
+}
 .labelgroup {
 	width: 200px;
   position:relative;
@@ -703,12 +737,12 @@ select:focus {
 	height: 275px;
 	width: 100%;
 }
-
+/*
 .slide-container {
   width: 100%;
 	margin-top: 48px;
 }
-
+*/
 .slide {
   position: relative;
 	height: 100%;
@@ -763,6 +797,12 @@ h2 {
 	font-size: 16px;
 }
 
+.desktopView {
+	display: block;
+}
+.mobileView {
+	display: none;
+}
 @media screen and (max-width : 1280px){
 	.slide .column-40 {
 		width: 49%;
@@ -773,19 +813,33 @@ h2 {
 	.slide .column-40 {
 		width: 60%;
 	}
-	.navbar-hide {
-		display: none;
-	}
-	nav button {
-
-	}
 }
 
 @media screen and (max-width : 680px){
+	.desktopView {
+		display: none;
+	}
+	.mobileView {
+		display: block;
+	}
+	.slide-container {
+		display: inline;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 48px;
+	}
+	.right-container {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+	}
+
 	.slide {
 		width: 80%;
 	}
-
+	.navbar-hide {
+		display: none;
+	}
 	.slide .column-40 {
 		width: 100%;
 	}
