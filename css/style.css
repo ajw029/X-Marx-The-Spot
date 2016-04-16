@@ -92,11 +92,26 @@ nav button {
 	width: 40px;
 	z-index: 9999;
 }
+
+#settings-icon:hover {
+   -webkit-animation: rotateFabButton .200s ease-in-out forwards;
+   -moz-animation:    rotateFabButton .200s ease-in-out forwards;
+   -o-animation:      rotateFabButton .200s ease-in-out forwards;
+   animation:         rotateFabButton .200s ease-in-out forwards;
+}
+
+nav button img:hover {
+	-webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    animation: scale(1.15);
+}
+
 .searchContainer button img, nav button img {
 	height: 100%;
 }
 
-	.notification-tray {
+.notification-tray {
 	height: 400px;
 	width: 280px;
 	position: fixed;
