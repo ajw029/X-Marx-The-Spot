@@ -771,19 +771,17 @@ h2 {
 	.slide .column-40 {
 		width: 60%;
 	}
-	.navbar-hide {
-		display: none;
-	}
-	nav button {
 
-	}
+
 }
 
 @media screen and (max-width : 680px){
 	.slide {
 		width: 80%;
 	}
-
+	.navbar-hide {
+		display: none;
+	}
 	.slide .column-40 {
 		width: 100%;
 	}
