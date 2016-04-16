@@ -80,6 +80,7 @@ nav ul li {
 	display: inline-block;
 	position: absolute;
 	vertical-align: top;
+	border-radius:2px;
 }
 
 nav ul li a {
@@ -94,12 +95,19 @@ nav button {
 }
 
 .cog:hover {
-   -webkit-animation: rotateFabButton .200s ease-in-out forwards;
-   -moz-animation:    rotateFabButton .200s ease-in-out forwards;
-   -o-animation:      rotateFabButton .200s ease-in-out forwards;
-   animation:         rotateFabButton .200s ease-in-out forwards;
+   -webkit-animation: rotateCog 2.5s infinite
+   -moz-animation:    rotateCog 2.5s infinite;
+   -o-animation:      rotateCog 2.5s infinite;
+   animation:         rotateCog 2.5s infinite;
 }
-
+@keyframes rotateCog{
+  0% {
+    transform: rotate(0deg) ;
+  }
+  100% {
+    transform: rotate(360deg) ;
+  }
+}
 nav button img:hover {
 	-webkit-transform: scale(1.15);
     -moz-transform: scale(1.15);
