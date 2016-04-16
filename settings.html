@@ -22,23 +22,25 @@
     <div class="formcontainer column-40">
       <form>
         <h1>Settings</h1>
-        <div class="inputgroup">
-          <input type="text" autofocus required/>
-          <span class="bar"></span>
-          <label>Title</label>
+				<div class="settinggroup">
+					<h2>Import/Export BookMarx</h2>
+				</div>
+				<div class="inputgroup">
+          <button type='button' class="boxButton okayButton" onclick="window.location.replace('index.html')">Import</button>
+          <button type='button' class="boxButton cancelButton" onclick="window.location.replace('index.html')">Export</button>
+				</div>
+
+				<div class="settinggroup">
+					<h2>Themes</h2>
+				</div>
+				<div class="inputgroup">
+          <select>
+            <option>Sky Blue</option>
+            <option>Magenta</option>
+            <option>Sexy Black</option>
+          </select>
         </div>
-        <div class="labelgroup deleteConf hide">
-          <label>Delete the Folder and BookMarx inside?</label>
-        </div>
-        <div class="inputgroup deleteContainer hide">
-          <button type='button' class="boxButton deleteButton" onclick="window.location.replace('index.html')">Background Images</button>
-          <button type='button' class="boxButton cancelButton" onclick="cancelDeleteFolder()">Themes</button>
-        </div>
-        <div class="inputgroup actionContainer">
-          <button type='button' class="boxButton okayButton" onclick="window.location.replace('index.html')">Background Image</button>
-          <button type='button' class="boxButton cancelButton" onclick="window.location.replace('index.html')">Sort</button>
-          <button type='button' class="boxButton deleteButton" onclick="deleteFolder()">Themes</button>
-        </div>
+
       </form>
     </div>
   </section>

@@ -556,6 +556,19 @@ form {
 	margin: 0 auto;
   margin-bottom:16px;
 }
+
+.settinggroup {
+	width: 300px;
+	position:relative;
+	margin: 0 auto;
+  margin-bottom:16px;
+	border-bottom: 1px solid grey;
+}
+.settinggroup button{
+	width: 200px;
+  position:relative;
+	margin: 0 auto;
+}
 .labelgroup {
 	width: 200px;
   position:relative;
