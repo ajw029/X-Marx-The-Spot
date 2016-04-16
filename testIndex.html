@@ -17,17 +17,15 @@
 <body>
   <nav>
     <ul class="nav-title">
-      <li><a href="index.html">BookMarx</a></li>
+      <li><a href="index.html">Bookmarx</a></li>
     </ul>
     <div class="searchContainer">
       <input type="text" placeholder="Search"></input>
     </div>
     <ul class="navbar-right">
-      <li class="navbar-hide"><button onclick="window.location.replace('add.html')"><img src="img/ic_bookmark_white_48dp_2x.png"></button></li>
-      <li class="navbar-hide"><button onclick="window.location.replace('folder.html')"><img src="img/ic_create_new_folder_white_48dp_2x.png"></button></li>
-      <li><button onclick="toggleNotifications()"><img src="img/ic_announcement_white_48dp_2x.png"></button></li>
-      <li><button onclick="toggleSort()"><img src="img/ic_filter_list_white_48dp_2x.png"></button></li>
       <li><button onclick="window.location.replace('settings.html')"><img src="img/ic_settings_white_48dp_2x.png"></button></li>
+      <li><button onclick="toggleSort()"><img src="img/ic_filter_list_white_48dp_2x.png"></button></li>
+      <li><button onclick="toggleNotifications()"><img src="img/ic_announcement_white_48dp_2x.png"></button></li>
     </ul>
   </nav>
 
@@ -82,75 +80,21 @@
   <div class="container">
     <section class="slide-container">
       <div class="slide">
-        <div class="column-80 folderContainer">
+        <div class="folderContainer">
           <div class="folder"  id="folder1">
             <h1>Sites I Like</h1>
             <button onclick="toggleFolder(this)" class="folderToggle closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png"/></button>
             <button onclick="window.location.replace('editfolder.html')"><img src="img/ic_settings_black_48dp_2x.png"/></button>
             <button onclick="window.location.replace('sharefolder.html')"><img src="img/ic_share_black_48dp_2x.png"/></button>
           </div>
-          <section class="right-container mobileView">
-            <div class="slide">
-              <div class="folderContent folder1  hide">
-                <ul>
-                  <li>
-                    <div class="bookmark">
-                      <a href="https://www.facebook.com">
-                        <h1>Casual Stalking Site</h1>
-                        <h2>www.facebook.com</h2>
-                      </a>
-                      <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
-                      <div class="deleteConfirmationContainer hide">
-                        <label>Delete?</label>
-                        <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
-                        <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
-                      </div>
-                      <div class="card__action-bar">
-                        <button class="fab" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
-                        <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                        <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
         </div>
-        <div class="column-80 folderContainer">
+        <div class="folderContainer">
           <div class="folder"  id="folder2">
             <h1>Pornz!!!!</h1>
             <button onclick="toggleFolder(this)" class="folderToggle closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png"/></button>
             <button onclick="window.location.replace('editfolder.html')"><img src="img/ic_settings_black_48dp_2x.png"/></button>
             <button onclick="window.location.replace('sharefolder.html')"><img src="img/ic_share_black_48dp_2x.png"/></button>
           </div>
-          <section class="right-container mobileView">
-            <div class="slide">
-              <div class="folderContent folder2  hide">
-                <ul>
-                  <li>
-                    <div class="bookmark">
-                      <a href="https://www.facebook.com">
-                        <h1>Casual Stalking Site</h1>
-                        <h2>www.facebook.com</h2>
-                      </a>
-                      <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
-                      <div class="deleteConfirmationContainer hide">
-                        <label>Delete?</label>
-                        <button class="confDelete deleteButton" onclick="confDelete(this)">Yes</button>
-                        <button class="confDelete cancelButton" onclick="cancelDelete(this)">No</button>
-                      </div>
-                      <div class="card__action-bar">
-                        <button class="fab" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png"></button>
-                        <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                        <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
         </div>
       </div>
     </section>
@@ -279,12 +223,13 @@
             </li>
           </ul>
         </div>
+
+
       </div>
     </section>
 
 
   </div>
-
 
   <section class="overlay hide" onclick="closeOverlay()"></section>
 
