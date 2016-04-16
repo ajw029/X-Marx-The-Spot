@@ -33,7 +33,7 @@ function confDelete(e) {
   var bookmarx = e.parentNode.parentNode.parentNode;
   var parentContainer = bookmarx.parentNode.parentNode;
   var elementHeight = $(bookmarx).height();
-
+  console.log(e)
   $(bookmarx).remove();
   var newheight = $(parentContainer).height()-elementHeight;
   $(parentContainer).css('height', newheight +'px');

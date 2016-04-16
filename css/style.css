@@ -865,7 +865,9 @@ h2 {
 	.mobileView {
 		display: block !important;
 	}
-
+	.settinggroup {
+		width: 80%;
+	}
 	.slide-container {
 		display: inline;
 		width: 100%;
