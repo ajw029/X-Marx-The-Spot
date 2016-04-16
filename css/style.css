@@ -57,17 +57,17 @@ nav {
 	width: 100%;
 	height: 48px;
 	z-index: 9999;
-	background-color: black;
+	background-color: #2196F3;
 	position: fixed;
 }
 nav ul {
 	padding: 8px;
+	padding-right: 0px;
 	list-style-type: none;
 	display: inline-block;
 }
 nav ul li {
 	display: inline-block;
-	width: 32%;
 	vertical-align: top;
 }
 .searchContainer input {
@@ -89,10 +89,8 @@ nav ul li a {
 nav button {
 	height: 32px;
 	vertical-align: top;
-	width: 48px;
+	width: 40px;
 	z-index: 9999;
-	margin-left: 8px;
-	margin-right: 8px;
 }
 .searchContainer button img, nav button img {
 	height: 100%;
@@ -178,7 +176,8 @@ nav h1 {
 }
 
 .navbar-right {
-	float: right;
+	position: absolute;
+	right: 8px;
 }
 
 /* Bookmark */
@@ -322,13 +321,11 @@ nav h1 {
   display: inline-block;
   line-height: 32px;
   padding: 0 16px;
-  color: #FF1744;
 }
 .card__action-bar img {
 }
 .card__button:hover {
 }
-
 button {
   border: none;
   background: transparent;
@@ -392,7 +389,7 @@ button.fab {
 	right: 16px;
 	width: 54px;
 	height: 54px;
-	background-color: #FF1744;
+	background-color: #2196F3;
 	border-radius: 100%;
 	box-shadow:0 1px 2px #aaa;
 	z-index: 9999;
@@ -409,7 +406,7 @@ button.mini-fab {
 	position: relative;
 	width: 32px;
 	height: 32px;
-	background-color: #FF1744;
+	background-color: #2196F3;
 	border-radius: 100%;
 	box-shadow:0 1px 2px #aaa;
 	z-index: 9999;
@@ -744,10 +741,10 @@ h1,h2,h3 {
 	color: black;
 }
 h1 {
-	color: #FF1744;
 	font-size: 22px;
 }
 h2 {
+	color: #666666;
 	font-size: 16px;
 }
 
@@ -761,12 +758,19 @@ h2 {
 	.slide .column-40 {
 		width: 60%;
 	}
+	.navbar-hide {
+		display: none;
+	}
+	nav button {
+
+	}
 }
 
 @media screen and (max-width : 680px){
 	.slide {
 		width: 80%;
 	}
+
 	.slide .column-40 {
 		width: 100%;
 	}
@@ -777,6 +781,6 @@ h2 {
 	}
 	.searchContainer input {
 		margin: 0 0 0 8px;
-		width: 70%;
+		width: 55%;
 	}
 }
