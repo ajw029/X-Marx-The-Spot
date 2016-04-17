@@ -1,3 +1,48 @@
+var staticData = [];
+var folder1 =
+{
+   folderName: "Finding People",
+   bookmarks: [
+     {title: "Casual Stalking Site",
+       url:"www.facebook.com",
+       favorite: true,
+       key: 0
+      },
+      {title: "Professional Stalking Site",
+       url:"https://www.linkedin.com",
+       favorite: true,
+       key: 1
+      },
+      {title: "Finding Romance",
+       url:"https://www.tinder.com",
+       favorite: true,
+       key: 2
+      }
+    ]
+};
+var folder2 =
+{
+  folderName: "Cars",
+  bookmarks: [{title: "Electric Cars",
+   url:"www.tesla.com",
+   favorite: false,
+   key: 3
+  },
+  {title: "Such Sexy",
+   url:"https://www.bmw.com",
+   favorite: true,
+   key: 4
+  },
+  {title: "German Engineering",
+   url:"https://www.audi.com",
+   favorite: true,
+   key: 5
+  }]
+};
+
+staticData.push(folder1);
+staticData.push(folder2);
+
 function toggleFavorite(e) {
   if ($(e).hasClass('favorite'))
     $(e).removeClass('favorite');
@@ -33,11 +78,13 @@ function confDelete(e) {
   var bookmarx = e.parentNode.parentNode.parentNode;
   var parentContainer = bookmarx.parentNode.parentNode;
   var elementHeight = $(bookmarx).height();
-  console.log(e)
-  $(bookmarx).remove();
+  var id =$(e.parentNode.parentNode).data('id');
+
+  $('.right-container').find("[data-id="+id+"]").parent().remove();
+  $('.slide-container').find("[data-id="+id+"]").parent().remove();
+
   var newheight = $(parentContainer).height()-elementHeight;
   $(parentContainer).css('height', newheight +'px');
-
 }
 
 /* Toggles the filer */
@@ -130,9 +177,14 @@ function expandFabOverlay() {
   }
 }
 
-function closeOverlay () {
+function closeOverlay (e) {
   if (! ($('.overlay').hasClass('hide')) ) {
-      expandFabOverlay();
+    $('.overlayContainer').find('.fab').removeClass('rotateFab').addClass('unRotateFab');
+    $('.mini-fab-container').children().each(function(index, element) {
+      $(this).removeClass('rollin').addClass('rollout');
+    });
+    $('.overlaySlide').addClass('hide');
+    $('.overlay').addClass('hide');
   }
 }
 
@@ -148,17 +200,24 @@ function cancelDeleteFolder() {
   $('.deleteConf').addClass('hide');
 }
 
-var prevWinWidth=0;
-$(window).on('resize', function(){
-  var win = $(this); //this = window
-  var tmpWinWidth = win.width();
-
-  if (tmpWinWidth <= 680) {
-    var growDiv = $('.slide-container').find('.'+expandedFolderId);
-    $('.slide-container').find('.'+expandedFolderId).removeClass('hide');
-  }
-  else {
-    $('.right-container').find('.'+expandedFolderId).removeClass("hide");
-  }
-
+function togglePasswordForm() {
+  $('.overlaySlide').removeClass('hide');
+  $('.overlay').removeClass('hide');
+}
+$(document).ready(function($) {
+  var prevWinWidth=0;
+  $(window).on('resize', function(){
+    var win = $(this); //this = window
+    var tmpWinWidth = win.width();
+    if (Math.abs(tmpWinWidth-prevWinWidth)>=100) {
+      prevWinWidth = tmpWinWidth;
+      if (tmpWinWidth <= 680) {
+        var growDiv = $('.slide-container').find('.'+expandedFolderId);
+        $('.slide-container').find('.'+expandedFolderId).removeClass('hide');
+      }
+      else {
+        $('.right-container').find('.'+expandedFolderId).removeClass("hide");
+      }
+    }
+  });
 });

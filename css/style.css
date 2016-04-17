@@ -127,7 +127,7 @@ nav button img:hover {
 	top: 48px;
 	right: 0;
 	display: block;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgb(122,122,122);
 }
 
 .notification-tray ul{
@@ -258,10 +258,10 @@ nav h1 {
 	list-style: none;
     margin-bottom: 10px;
 }
-.side-nav-container li h1 {
+.side-nav-container li button {
 	font-size: 20px;
 }
-.side-nav-container li h1:hover {
+.side-nav-container li button:hover {
 	color: #2196F3;
 	cursor: pointer;
 }
@@ -364,13 +364,13 @@ nav h1 {
     transform: rotate(0deg) ;
   }
   100% {
-    transform: rotate(180deg) ;
+    transform: rotate(90deg) ;
   }
 }
 
 @keyframes removeFolderFrames{
   0% {
-    transform: rotate(180deg) ;
+    transform: rotate(90deg) ;
   }
   100% {
     transform: rotate(0deg) ;
@@ -560,6 +560,15 @@ button.mini-fab img {
 	left: 0;
 	z-index: 9999;
 	background-color: rgba(229,229,229,.5);
+}
+.overlaySlide {
+	position: absolute !important;
+	top: 25%;
+	z-index: 9999;
+	padding: 0;
+	left: 0;
+	right: 0;
+	height: auto !important;
 }
 .overlay:hover {
 	cursor: pointer;
@@ -856,9 +865,29 @@ h2 {
 	.slide .column-40 {
 		width: 60%;
 	}
+	.side-nav-container li button {
+		font-size: 16px;
+	}
 }
 
 @media screen and (max-width : 680px){
+	@keyframes openFolderFrames{
+	  0% {
+	    transform: rotate(0deg) ;
+	  }
+	  100% {
+	    transform: rotate(180deg) ;
+	  }
+	}
+
+	@keyframes removeFolderFrames{
+	  0% {
+	    transform: rotate(180deg) ;
+	  }
+	  100% {
+	    transform: rotate(0deg) ;
+	  }
+	}
 	.desktopView {
 		display: none;
 	}

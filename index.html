@@ -82,19 +82,21 @@
   <div class="container">
     <section class="side-nav-container desktopView">
       <ul>
-        <li><h1>My BookMarx</h1></li>
-        <li><h1>Most Visited</h1></li>
-        <li><h1>Favorites</h1></li>
+        <li><button>My BookMarx</button></li>
+        <li><button>Most Visited</button></li>
+        <li><button>Favorites</button></li>
+        <li><button>Shared</button></li>
+        <li><button onclick="togglePasswordForm()">Private</button></li>
         <li class="side-nav-divider"></li>
-        <li><h1>Videos</h1></li>
-        <li><h1>Images</h1></li>
-        <li><h1>Articles</h1></li>
+        <li><button>Videos</button></li>
+        <li><button>Images</button></li>
+        <li><button>Articles</button></li>
       </ul>
     </section>
     <section class="slide-container">
       <div class="slide">
-        <div class="column-80 folderContainer">
-          <div class="folder"  id="folder1">
+        <div class="column- folderContainer">
+          <div class="folder" id="folder1">
             <h1>People Finder</h1>
             <button onclick="toggleFolder(this)" class="folderToggle closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png"/></button>
             <button onclick="window.location.replace('editfolder.html')"><img class="cog" src="img/ic_settings_black_48dp_2x.png"/></button>
@@ -103,7 +105,7 @@
           <div class="folderContent mobileView folder1  hide">
             <ul>
               <li>
-                <div class="bookmark">
+                <div class="bookmark" data-id="0">
                   <a href="https://www.facebook.com">
                     <h1>Casual Stalking Site</h1>
                     <h2>www.facebook.com</h2>
@@ -122,7 +124,7 @@
                 </div>
               </li>
               <li>
-                <div class="bookmark">
+                <div class="bookmark" data-id="1">
                   <a href="https://www.linkedin.com">
                     <h1>Professional Stalking Site</h1>
                     <h2>www.linkedin.com</h2>
@@ -141,7 +143,7 @@
                 </div>
               </li>
               <li>
-                <div class="bookmark">
+                <div class="bookmark"  data-id="2">
                   <a href="https://www.tinder.com">
                     <h1>Finding Romance</h1>
                     <h2>www.tinder.com</h2>
@@ -162,19 +164,19 @@
             </ul>
           </div>
         </div>
-        <div class="column-80 folderContainer">
-          <div class="folder"  id="folder2">
+        <div class="column- folderContainer">
+          <div class="folder" id="folder2">
             <h1>Cars</h1>
             <button onclick="toggleFolder(this)" class="folderToggle closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png"/></button>
             <button onclick="window.location.replace('editfolder.html')"><img class="cog" src="img/ic_settings_black_48dp_2x.png"/></button>
             <button onclick="window.location.replace('sharefolder.html')"><img src="img/ic_share_black_48dp_2x.png"/></button>
           </div>
-          <div class="folderContent mobileView folder2  hide">
+          <div class="folderContent mobileView folder2 hide">
             <ul>
               <li>
-                <div class="bookmark">
+                <div class="bookmark"  data-id="3">
                   <a href="https://www.facebook.com">
-                    <h1>Electric Cars</h1>
+                    <h1>Tesla</h1>
                     <h2>www.tesla.com</h2>
                   </a>
                   <button class="closeButton" onclick="showDeleteConf(this)"><img src="img/ic_close_black_48dp_2x.png"></button>
@@ -191,7 +193,7 @@
                 </div>
               </li>
               <li>
-                <div class="bookmark">
+                <div class="bookmark" data-id="4">
                   <a href="https://www.bmw.com">
                     <h1>Such Sexy</h1>
                     <h2>www.bmw.com</h2>
@@ -210,7 +212,7 @@
                 </div>
               </li>
               <li>
-                <div class="bookmark">
+                <div class="bookmark" data-id="5">
                   <a href="https://www.audi.com">
                     <h1>German Engineering</h1>
                     <h2>www.audi.com</h2>
@@ -236,10 +238,10 @@
     </section>
     <section class="right-container desktopView">
       <div class="slide">
-        <div class="folderContent folder1  hide">
+        <div class="folderContent folder1 hide">
           <ul>
             <li>
-              <div class="bookmark">
+              <div class="bookmark" data-id="0">
                 <a href="https://www.facebook.com">
                   <h1>Casual Stalking Site</h1>
                   <h2>www.facebook.com</h2>
@@ -258,7 +260,7 @@
               </div>
             </li>
             <li>
-              <div class="bookmark">
+              <div class="bookmark" data-id="1">
                 <a href="https://www.linkedin.com">
                   <h1>Professional Stalking Site</h1>
                   <h2>www.linkedin.com</h2>
@@ -277,7 +279,7 @@
               </div>
             </li>
             <li>
-              <div class="bookmark">
+              <div class="bookmark" data-id="2">
                 <a href="https://www.tinder.com">
                   <h1>Finding Romance</h1>
                   <h2>www.tinder.com</h2>
@@ -298,10 +300,10 @@
           </ul>
         </div>
 
-        <div class="folderContent folder2  hide">
+        <div class="folderContent folder2 hide">
           <ul>
             <li>
-              <div class="bookmark">
+              <div class="bookmark" data-id="3">
                 <a href="https://www.facebook.com">
                   <h1>Tesla</h1>
                   <h2>www.tesla.com</h2>
@@ -320,7 +322,7 @@
               </div>
             </li>
             <li>
-              <div class="bookmark">
+              <div class="bookmark" data-id="4">
                 <a href="https://www.bmw.com">
                   <h1>Such Sexy</h1>
                   <h2>www.bmw.com</h2>
@@ -339,7 +341,7 @@
               </div>
             </li>
             <li>
-              <div class="bookmark">
+              <div class="bookmark" data-id="5">
                 <a href="https://www.audi.com">
                   <h1>German Engineering</h1>
                   <h2>www.audi.com</h2>
@@ -364,13 +366,30 @@
   </div>
 
 
-  <section class="overlay hide" onclick="closeOverlay()"></section>
+  <section class="overlay hide" onclick="closeOverlay(this)">
+  </section>
+
+  <section class="slide overlaySlide hide">
+    <div class="formcontainer column-40">
+      <form>
+        <h1>Enter Password</h1>
+        <div class="inputgroup">
+          <input type="text" autofocus required/>
+          <span class="bar"></span>
+          <label>Title</label>
+        </div>
+        <div class="inputgroup">
+          <button type="button" class="boxButton okayButton" onclick="window.location.replace('index.html')">Enter</button>
+          <button type="button" class="boxButton cancelButton" onclick="window.location.replace('index.html')">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </section>
 
   <div class="overlayContainer">
     <div class="mini-fab-container hide">
       <button class="mini-fab" onclick="window.location.replace('add.html')"><img src="img/ic_bookmark_white_48dp_2x.png"></button>
       <button class="mini-fab" onclick="window.location.replace('folder.html')"><img src="img/ic_create_new_folder_white_48dp_2x.png"></button>
-      <!--button class="mini-fab" onclick="toggleSort()"><img src="img/ic_filter_list_white_48dp_2x.png"></button-->
     </div>
     <button class="fab" onclick="expandFabOverlay()"><img src="img/ic_add_white_48dp_2x.png"></button>
   </div>
