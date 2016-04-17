@@ -164,7 +164,9 @@ function expandFabOverlay() {
     $('.mini-fab-container').children().each(function(index, element) {
       $(this).removeClass('rollin').addClass('rollout');
     });
+    $('.overlaySlide').addClass('hide');
     $('.overlay').addClass('hide');
+    $('.overlayContainer').removeClass('hide');
   }
   // Show Overlay
   else {
@@ -183,9 +185,10 @@ function closeOverlay (e) {
     $('.mini-fab-container').children().each(function(index, element) {
       $(this).removeClass('rollin').addClass('rollout');
     });
-    $('.overlaySlide').addClass('hide');
-    $('.overlay').addClass('hide');
   }
+  $('.overlaySlide').addClass('hide');
+  $('.overlay').addClass('hide');
+  $('.overlayContainer').removeClass('hide');
 }
 
 function deleteFolder() {
@@ -203,6 +206,7 @@ function cancelDeleteFolder() {
 function togglePasswordForm() {
   $('.overlaySlide').removeClass('hide');
   $('.overlay').removeClass('hide');
+  $('.overlayContainer').addClass('hide');
 }
 $(document).ready(function($) {
   var prevWinWidth=0;
