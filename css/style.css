@@ -247,7 +247,12 @@ nav h1 {
 	margin-left: 48px;
 	margin-right: 48px;
 }
-
+.side-nav-container h1 {
+	font-size: 22px;
+	font-weight: 400;
+	margin-bottom: 16px;
+	text-align: center;
+}
 .side-nav-divider {
 	border-bottom: 1px solid #dcdce0;
 	height: 1px;
@@ -945,7 +950,7 @@ h2 {
 
     /* Position the tooltip */
     position: absolute;
-   
+
     right: 100%;
   	top: 90%;
   	left: auto;
@@ -955,5 +960,3 @@ h2 {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
-
-
