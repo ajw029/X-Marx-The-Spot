@@ -146,7 +146,7 @@ nav button img:hover {
 	background-color: white;
 }
 
-.notification-card  h1 {
+.notification-card  h2 {
 	font-size: 18px;
 }
 
@@ -188,7 +188,7 @@ nav button img:hover {
 	cursor: pointer;
 }
 
-nav h1 {
+nav h2 {
 	color: white;
 }
 .searchContainer {
@@ -247,7 +247,7 @@ nav h1 {
 	margin-left: 48px;
 	margin-right: 48px;
 }
-.side-nav-container h1 {
+.side-nav-container h2 {
 	font-size: 22px;
 	font-weight: 400;
 	margin-bottom: 16px;
@@ -333,7 +333,7 @@ nav h1 {
 	float: left;
 	margin-left: 8px;
 }
-.folder h1 {
+.folder h2 {
 	display: inline-block;
 	padding: 5px;
 	padding-left: 16px;
@@ -635,7 +635,7 @@ button.fab:hover {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	margin-top: 48px !important;
 }
-.formcontainer h1 {
+.formcontainer h2 {
 	text-align: center;
 	margin-bottom: 16px;
 }
@@ -842,14 +842,14 @@ select:focus {
 	margin: 0 auto;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
 	font-weight:100;
 	color: black;
 }
-h1 {
+h2 {
 	font-size: 22px;
 }
-h2 {
+h3 {
 	color: #666666;
 	font-size: 16px;
 }
