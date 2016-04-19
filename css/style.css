@@ -216,6 +216,12 @@ nav h2 {
 	margin: 0 auto;
 	margin-bottom: 4px;
 }
+.bookmark h2 {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 100%;
+}
 .noFolderBookmark{
 	width: 100% !important;
 }
