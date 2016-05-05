@@ -205,7 +205,7 @@ nav h2 {
 
 /* Bookmark */
 .bookmark {
-	width: 95%;
+	width: 70%;
 	background-color: white;
 	height: 104px;
 	display: block !important;
@@ -248,10 +248,14 @@ nav h2 {
 .side-nav-container {
 	display: inline;
 	float: left;
-	width: 10%;
+	width: 15%;
 	margin-top: 70px;
-	margin-left: 48px;
-	margin-right: 48px;
+}
+
+.side-nav-container ul,
+.side-nav-container h2 {
+	width: 80%;
+	margin: 0 auto;
 }
 .side-nav-container h2 {
 	font-size: 22px;
@@ -270,11 +274,12 @@ nav h2 {
     margin-bottom: 10px;
 }
 
-.side-nav-container li button {
+.side-nav-container li a {
 	font-size: 20px;
 	text-align: left;
+	color: black;
 }
-.side-nav-container li button:hover {
+.side-nav-container li a:hover {
 	color: #2196F3;
 	cursor: pointer;
 }
@@ -282,7 +287,7 @@ nav h2 {
 .right-container{
 	display: inline;
 	float:left;
- 	width: 40%;
+ 	width: 55%;
 	margin-top: 48px;
 }
 
@@ -872,6 +877,9 @@ h3 {
 @media screen and (max-width : 1280px){
 	.slide .column-40 {
 		width: 49%;
+	}
+	.bookmark {
+		width: 90%;
 	}
 }
 

@@ -25,8 +25,6 @@
     <ul class="navbar-right">
       <li class="navbar-hide"><button onclick="window.location.replace('add.html')" class="tooltip"><img src="img/ic_bookmark_white_48dp_2x.png" alt="bookmark"><span class="tooltiptext">Add a BookMarx</span></button></li>
       <li class="navbar-hide"><button onclick="window.location.replace('folder.html')" class="tooltip"><img src="img/ic_create_new_folder_white_48dp_2x.png" alt="folder"><span class="tooltiptext">Add a Folder</span></button></li>
-      <li><button onclick="toggleNotifications()" class="tooltip"><img src="img/ic_announcement_white_48dp_2x.png" alt="notifications">
-      <span class="tooltiptext">Notifications</span></button></li>
       <li><button onclick="toggleSort()" class="tooltip"><img src="img/ic_filter_list_white_48dp_2x.png" alt="filter">
       <span class="tooltiptext">Filter</span></button></li>
       <li><button onclick="window.location.replace('settings.html')" class="tooltip"><img class="cog" src="img/ic_settings_white_48px.svg" alt="settings"><span class="tooltiptext" >Settings</span></button></li>
@@ -42,60 +40,18 @@
     </div>
   </div>
 
-  <div class="notification-tray hide">
-    <ul>
-      <li>
-        <div class="notification-card">
-          <h2>Such Sexy is broken.</h2>
-          <div class="card__action-bar">
-            <button class="card__button" onclick="window.location.replace('index.html')">FIX</button>
-            <button class="card__button" onclick="window.location.replace('index.html')">DELETE</button>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="notification-card">
-          <h2>Thomas Powell sent you a shared folder.</h2>
-          <div class="card__action-bar">
-            <button class="card__button" onclick="window.location.replace('index.html')">SAVE</button>
-            <button class="card__button" onclick="window.location.replace('index.html')">DELETE</button>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="notification-card">
-          <h2>Steve Jobs sent you a link.</h2>
-          <div class="card__action-bar">
-            <button class="card__button" onclick="window.location.replace('index.html')">SAVE</button>
-            <button class="card__button" onclick="window.location.replace('index.html')">DELETE</button>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="notification-card">
-          <h2>Bill Gates sent you a link.</h2>
-          <div class="card__action-bar">
-            <button class="card__button" onclick="window.location.replace('index.html')">SAVE</button>
-            <button class="card__button" onclick="window.location.replace('index.html')">DELETE</button>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-
   <div class="container">
     <section class="side-nav-container desktopView">
       <h2>Quicklinks</h2>
       <ul>
-        <li><button>My BookMarx</button></li>
-        <li><button>Most Visited</button></li>
-        <li><button>Favorites</button></li>
-        <li><button>Shared</button></li>
-        <li><button onclick="togglePasswordForm()">Private</button></li>
+        <li><a>My BookMarx</a></li>
+        <li><a>Most Visited</a></li>
+        <li><a>Favorites</a></li>
+        <li><a onclick="togglePasswordForm()">Private</a></li>
         <li class="side-nav-divider"></li>
-        <li><button>Videos</button></li>
-        <li><button>Images</button></li>
-        <li><button>Articles</button></li>
+        <li><a>Videos</a></li>
+        <li><a>Images</a></li>
+        <li><a>Articles</a></li>
       </ul>
     </section>
     <section class="slide-container">
@@ -105,7 +61,6 @@
             <h2>People Finder</h2>
             <button onclick="toggleFolder(this)" class="folderToggle closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png" alt="arrow"/></button>
             <button onclick="window.location.replace('editfolder.html')"><img class="cog" src="img/ic_settings_black_48px.svg" alt="settings"/></button>
-            <button onclick="window.location.replace('sharefolder.html')"><img src="img/ic_share_black_48dp_2x.png" alt="share"/></button>
           </div>
           <div class="folderContent mobileView folder1  hide">
             <ul>
@@ -124,7 +79,6 @@
                   <div class="card__action-bar">
                     <button class="fab" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                     <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                    <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                   </div>
                 </div>
               </li>
@@ -143,7 +97,6 @@
                   <div class="card__action-bar">
                     <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                     <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                    <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                   </div>
                 </div>
               </li>
@@ -162,7 +115,6 @@
                   <div class="card__action-bar">
                     <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                     <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                    <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                   </div>
                 </div>
               </li>
@@ -174,7 +126,6 @@
             <h2>Cars</h2>
             <button onclick="toggleFolder(this)" class="folderToggle closedFolder"><img src="img/ic_keyboard_arrow_up_black_48dp_2x.png" alt="arrow"/></button>
             <button onclick="window.location.replace('editfolder.html')"><img class="cog" src="img/ic_settings_black_48px.svg" alt="settings"/></button>
-            <button onclick="window.location.replace('sharefolder.html')"><img src="img/ic_share_black_48dp_2x.png" alt="share"/></button>
           </div>
           <div class="folderContent mobileView folder2 hide">
             <ul>
@@ -193,7 +144,6 @@
                   <div class="card__action-bar">
                     <button class="fab" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                     <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                    <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                   </div>
                 </div>
               </li>
@@ -212,7 +162,6 @@
                   <div class="card__action-bar">
                     <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                     <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                    <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                   </div>
                 </div>
               </li>
@@ -231,7 +180,6 @@
                   <div class="card__action-bar">
                     <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                     <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                    <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                   </div>
                 </div>
               </li>
@@ -260,7 +208,6 @@
                 <div class="card__action-bar">
                   <button class="fab" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                   <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                  <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                 </div>
               </div>
             </li>
@@ -279,7 +226,6 @@
                 <div class="card__action-bar">
                   <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                   <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                  <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                 </div>
               </div>
             </li>
@@ -298,7 +244,6 @@
                 <div class="card__action-bar">
                   <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                   <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                  <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                 </div>
               </div>
             </li>
@@ -322,7 +267,6 @@
                 <div class="card__action-bar">
                   <button class="fab" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                   <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                  <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                 </div>
               </div>
             </li>
@@ -341,7 +285,6 @@
                 <div class="card__action-bar">
                   <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                   <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                  <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                 </div>
               </div>
             </li>
@@ -360,7 +303,6 @@
                 <div class="card__action-bar">
                   <button class="fab favorite" onclick="toggleFavorite(this)"><img src="img/ic_star_white_48dp_2x.png" alt="star"></button>
                   <button class="card__button" onclick="window.location.replace('edit.html')">EDIT</button>
-                  <button class="card__button" onclick="window.location.replace('sharefolder.html')">SHARE</button>
                 </div>
               </div>
             </li>
