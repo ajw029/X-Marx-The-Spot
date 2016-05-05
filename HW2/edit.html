@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Edit Bookmarx</title>
+    <meta name="description" content="The Team Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="imgs/tp.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/buttonActions.js"></script>
+  </head>
+
+  <body class="black-background">
+    <nav>
+      <ul>
+        <li><a href="index.html">BookMarx</a></li>
+      </ul>
+    </nav>
+
+    <section class="slide">
+      <div class="formcontainer column-40">
+        <form>
+          <h1>Edit Bookmarx</h1>
+          <div class="inputgroup">
+            <input type="text" autofocus required/>
+            <span class="bar"></span>
+            <label>Title</label>
+          </div>
+          <div class="inputgroup">
+            <input type="text" required/>
+            <span class="bar"></span>
+            <label>URL</label>
+          </div>
+          <div class="inputgroup">
+            <input type="text" required/>
+            <span class="bar"></span>
+            <label>Description</label>
+          </div>
+          <div class="inputgroup">
+            <input type="text" required/>
+            <span class="bar"></span>
+            <label>Keywords</label>
+          </div>
+          <div class="labelgroup">
+            <label>Folder</label>
+          </div>
+          <div class="inputgroup">
+            <select>
+              <option>No Folder</option>
+              <option>Sites I Like</option>
+              <option>Folder 2</option>
+            </select>
+          </div>
+          <div class="inputgroup">
+            <button type="button" class="boxButton okayButton" onclick="window.location.replace('index.html')">Save</button>
+            <button type="button" class="boxButton cancelButton" onclick="window.location.replace('index.html')">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+  </html>

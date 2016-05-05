@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Settings</title>
+	<meta name="description" content="Bookmarx">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="imgs/tp.png">
+
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/buttonActions.js"></script>
+</head>
+
+<body class="black-background">
+  <nav>
+    <ul>
+      <li><a href="index.html">BookMarx</a></li>
+    </ul>
+  </nav>
+  <section class="slide">
+    <div class="formcontainer column-40">
+      <form>
+        <h1>Settings</h1>
+				<div class="settinggroup">
+					<h2>Import/Export BookMarx</h2>
+				</div>
+				<div class="inputgroup">
+          <button type='button' class="boxButton okayButton" onclick="window.location.replace('index.html')">Import</button>
+          <button type='button' class="boxButton cancelButton" onclick="window.location.replace('index.html')">Export</button>
+				</div>
+
+				<div class="settinggroup">
+					<h2>Themes</h2>
+				</div>
+				<div class="inputgroup">
+          <select>
+            <option>Sky Blue</option>
+            <option>Magenta</option>
+            <option>Sexy Black</option>
+          </select>
+        </div>
+
+				<div class="settinggroup">
+					<h2>Default Sorting Method</h2>
+				</div>
+				<div class="inputgroup">
+          <select>
+            <option>A-Z</option>
+            <option>Z-A</option>
+            <option>Favorites</option>
+            <option>Frequency</option>
+          </select>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  </body>
+</html>
